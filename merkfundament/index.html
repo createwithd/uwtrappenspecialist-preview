@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="utf-8">
+<meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uw Trappen Specialist avatars en merkkeuzes</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<style>
+/* Werkdocument voor de eigenaar: logo-navy als ruggengraat, condensed koppen zoals het logo, foto's als bewijs. */
+:root{--ink:#10293F;--blue:#2B6E9E;--paper:#FFFFFF;--tint:#F1F4F6;--line:#D9E0E5;--mut:#54646F;--obs:#1F6B4A;--lik:#8A5A00;--hyp:#8C3B3B;
+--d:"Barlow Condensed","Arial Narrow",sans-serif;--t:"Nunito Sans",system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16.5px/1.6 var(--t)}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.top{background:var(--ink);color:#fff}
+.top .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding-top:36px;padding-bottom:36px}
+.top img{border-radius:4px;aspect-ratio:4/3;object-fit:cover;width:100%}
+h1,h2,h3{font-family:var(--d);line-height:1.08;text-wrap:balance;margin:0}
+h1{font-size:clamp(38px,6vw,60px);font-weight:700}h2{font-size:clamp(30px,4vw,40px);font-weight:700;margin-bottom:10px}h3{font-size:23px;font-weight:600}
+.lead{font-size:18.5px;max-width:58ch;margin:14px 0 0}.top .lead{color:#DCE5EB}
+section{padding:44px 0;border-top:1px solid var(--line)}section p{max-width:70ch}
+.key{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+.key div{background:var(--tint);padding:16px 18px;border-left:4px solid var(--blue)}.key b{display:block;font:600 22px/1.15 var(--d);margin-bottom:4px}
+.tw{overflow-x:auto;margin-top:16px}table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}thead th{font-size:13px;color:var(--mut);font-weight:800}
+tbody th{font-weight:700}.num{text-align:center;font-variant-numeric:tabular-nums}.tot{font-weight:800}tr.groen{background:#E6F5EC}tr.rood{background:#FBE9E9}
+.avs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+.av{border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:8px}
+.av header{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.av h3{flex:1 1 180px}.no{font:700 22px var(--d);color:var(--blue);min-width:22px}
+.sc{font-weight:800;font-variant-numeric:tabular-nums;margin-left:auto}.kort{margin:0}
+blockquote{margin:4px 0;padding:8px 12px;background:var(--tint);font:600 21px/1.2 var(--d)}
+dl{display:grid;grid-template-columns:96px 1fr;gap:4px 12px;margin:0;font-size:15px}dt{font-weight:800}dd{margin:0}
+.av.groen{border:2px solid #1F8A5B;background:#F1FAF5}.av.rood{border:2px solid #C43D3D;background:#FDF3F3}.av blockquote{background:#fff}.waarom{margin:0;color:#9E2B2B}.chip{font-size:12px;font-weight:800;padding:2px 8px;border-radius:3px;color:#fff;white-space:nowrap}.obs{background:var(--obs)}.lik{background:var(--lik)}.hyp{background:var(--hyp)}.av .chip{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.pals{display:grid;gap:26px;margin-top:20px}.pal{border:1px solid var(--line);padding:20px}.pal header{display:flex;gap:10px;align-items:center}
+.sw{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:0;margin:12px 0}.sw li{padding:12px;min-height:74px;display:flex;flex-direction:column;justify-content:flex-end;font-size:13px;border:1px solid rgba(16,41,63,.08)}.sw span{font-variant-numeric:tabular-nums}
+.mock{display:grid;grid-template-columns:300px 1fr;gap:18px;margin-bottom:12px}
+.ad{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--n)}.ad>img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.adtxt{position:absolute;left:0;right:0;bottom:0;background:var(--n);color:#fff;padding:14px 16px}.adh{font:700 27px/1.05 var(--d);margin:0}.ads{margin:4px 0 10px;font-size:14px}
+.btn{display:inline-block;background:var(--a);color:var(--o);font-weight:800;padding:8px 14px;border-radius:3px;font-size:14.5px}.btn.sm{padding:5px 10px;font-size:13px}
+.web{border:1px solid var(--line);background:var(--b);display:flex;flex-direction:column}.bar{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:8px 14px}.bar img{height:42px;width:auto}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;flex:1;align-items:stretch}.hero>div{padding:22px 0 22px 20px;align-self:center}.hero>img{width:100%;height:100%;object-fit:cover;min-height:240px}
+.eye{font-weight:800;font-size:13px;color:var(--n);margin:0}.h{font:700 clamp(30px,3.6vw,42px)/1.05 var(--d);color:var(--n);margin:6px 0 14px}
+.pal p{margin:6px 0}
+.tvs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}.tv{border:1px solid var(--line);padding:16px}.tv header{display:flex;gap:8px;align-items:center}.tv p{margin:8px 0}.mut{color:var(--mut);font-size:14.5px}
+.vast{padding-left:20px;max-width:78ch}.vast li{margin-bottom:6px}ol.q{padding-left:26px;margin:10px 0 22px}.q li{margin-bottom:10px;max-width:78ch}.q b,.q span{display:block}.q span{color:var(--mut);font-size:15px}
+footer{padding:26px 0;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
+a{color:var(--blue)}:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@media (max-width:860px){.top .wrap,.avs,.mock,.tvs,.key{grid-template-columns:1fr}.ad{max-width:320px}}
+@media (max-width:460px){.sw{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero>div{padding:18px}dl{grid-template-columns:1fr}dd{margin-bottom:6px}}
+</style></head><body>
+<div class="top"><div class="wrap"><div>
+<h1>Uw Trappen Specialist: 10 avatars en de merkkeuzes</h1>
+<p class="lead">Eerst dit, dan de salespagina's en Meta-ads. Mensen doen deze renovatie vooral als ze een huis kopen en inrichten, of als ze de hal en de trap van hun huidige woning mooi willen maken.</p>
+</div><img src="img/bocht.jpg" alt="Project van Uw Trappen Specialist: eiken trap met bocht"></div></div>
+<main class="wrap">
+<section style="border-top:0"><h2>Wat we vonden</h2>
+<div class="key">
+<div><b>De markt is er</b>'traprenovatie' wordt 15.000 keer per maand gezocht, 'trap bekleden' 6.500 keer. Jullie site krijgt ongeveer 16 bezoekers per maand via Google en draait geen zoekadvertenties.</div>
+<div><b>Upstairs heeft een zwakke plek</b>De lage reviews gaan vooral over prijzen vanaf € 5.000 en beslissen binnen enkele minuten. Dit is niet representatief voor al hun klanten: 89% van hun reviews is 4 of 5 sterren.</div>
+</div>
+<p style="margin-top:18px"><b>Waar dit op steunt:</b> Dit onderzoek is gebaseerd op de reviewdata van duizenden klanten: de scores van ruim 7.700 reviews van Upstairs, ProStairs en Daniels. Daarnaast analyseerden we 60 zoektermen in Ahrefs, de sites van alle vier de bedrijven, klachtentopics op het Radar-forum en jullie eigen praktijkkennis. Met de offertes uit de site maken we de avatars definitief.</p>
+</section>
+<section><h2>Scorecard</h2><p>Groen is de groep waar we op mikken, rood blijft staan maar krijgt geen focus. Binnen elke kleur staat de hoogste score bovenaan.</p>
+<div class="tw"><table><thead><tr><th>#</th><th>Avatar</th><th class="num">Pijn</th><th class="num">Koopbereid</th><th class="num">Schaal</th><th class="num">Weinig uitleg</th><th class="num">Totaal /20</th></tr></thead><tbody><tr class='groen'><td>4</td><th scope='row'>De koper van een ouder huis</th><td class='num'>4</td><td class='num'>4</td><td class='num'>4</td><td class='num'>4</td><td class='num tot'>16</td></tr><tr class='groen'><td>5</td><th scope='row'>De nieuwbouwkoper met een kale trap</th><td class='num'>3</td><td class='num'>4</td><td class='num'>4</td><td class='num'>4</td><td class='num tot'>15</td></tr><tr class='groen'><td>6</td><th scope='row'>De woonliefhebber die de hal mooi wil hebben</th><td class='num'>3</td><td class='num'>4</td><td class='num'>4</td><td class='num'>4</td><td class='num tot'>15</td></tr><tr class='groen'><td>7</td><th scope='row'>Het gezin met kinderen, hond en een krakende trap</th><td class='num'>3</td><td class='num'>3</td><td class='num'>4</td><td class='num'>3</td><td class='num tot'>13</td></tr><tr class='groen'><td>10</td><th scope='row'>De 65-plusser die veilig wil blijven wonen</th><td class='num'>3</td><td class='num'>3</td><td class='num'>3</td><td class='num'>3</td><td class='num tot'>12</td></tr><tr class='rood'><td>9</td><th scope='row'>De klant die via via komt</th><td class='num'>3</td><td class='num'>4</td><td class='num'>2</td><td class='num'>5</td><td class='num tot'>14</td></tr><tr class='rood'><td>3</td><th scope='row'>Het gezin met versleten traptapijt</th><td class='num'>3</td><td class='num'>2</td><td class='num'>5</td><td class='num'>3</td><td class='num tot'>13</td></tr><tr class='rood'><td>1</td><th scope='row'>De klant die schrok van de offerte</th><td class='num'>4</td><td class='num'>2</td><td class='num'>3</td><td class='num'>3</td><td class='num tot'>12</td></tr><tr class='rood'><td>2</td><th scope='row'>De huiseigenaar die geen verkoper over de vloer wil</th><td class='num'>3</td><td class='num'>2</td><td class='num'>4</td><td class='num'>2</td><td class='num tot'>11</td></tr><tr class='rood'><td>8</td><th scope='row'>De klusser die het eerst zelf wilde doen</th><td class='num'>3</td><td class='num'>1</td><td class='num'>3</td><td class='num'>2</td><td class='num tot'>9</td></tr></tbody></table></div>
+<p style="margin-top:14px"><b>Advies:</b> richt het merk op inrichting en uitstraling: de trap die het huis afmaakt. Verkopen doen we aan huis, met advies en stalen bij de klant thuis. Prijs wordt geen hoofdargument, omdat jullie niet de goedkoopste zijn. De klachten bij Upstairs gaan over druk tijdens het huisbezoek, dus een prettig adviesbezoek blijft een sterk punt. De scores zijn aangepast op jullie input.</p></section>
+<section><h2>De 10 avatars</h2>
+<p>Groen zijn de vijf gekozen groepen, rood de overige vijf. Het label zegt hoe hard het bewijs is: Observed staat letterlijk in bronnen of komt van jullie, Likely volgt uit meerdere signalen, Strategic Hypothesis moet nog getest worden.</p>
+<div class="avs"><article class="av groen">
+<header><span class="no">4</span><h3>De koper van een ouder huis</h3><span class="chip obs">Observed</span><span class="sc">16/20</span></header>
+<p class="kort">Heeft net een ouder huis gekocht, is bezig met de inrichting en wil de trap meteen mee vet maken.</p>
+<blockquote>Nieuwe vloer, nieuwe muren, en dan die trap nog.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Nieuwe eigenaar van een bestaande woning, bezig met vloer, muren en inrichting.</dd>
+<dt>Waarom nu</dt><dd>Het huis wordt ingericht en de oude trap past niet meer bij de rest.</dd>
+<dt>Bang voor</dt><dd>Dat de trap straks als enige oud oogt. Dat de planning van de verbouwing in de knel komt.</dd>
+<dt>Wil eigenlijk</dt><dd>Een huis dat in één keer klopt, met een trap om trots op te zijn.</dd>
+<dt>Belofte</dt><dd>Een trap die past bij je nieuwe inrichting, met advies en stalen bij jou thuis.</dd>
+<dt>Kanaal</dt><dd>Meta op verhuizers en woninginteresse, daarna adviesbezoek aan huis</dd>
+<dt>Bewijs</dt><dd>Observed: bevestigd door jullie als hoofdgroep. Plus één review (J Bunan, Upstairs). Leeftijd en type woning komen nog uit de klantdata.</dd>
+</dl></article><article class="av groen">
+<header><span class="no">5</span><h3>De nieuwbouwkoper met een kale trap</h3><span class="chip obs">Observed</span><span class="sc">15/20</span></header>
+<p class="kort">Krijgt een nieuwbouwhuis met kale trap, is bezig met de inrichting en wil de trap meteen vet maken.</p>
+<blockquote>Sleutel binnen? Dan is je trap nu aan de beurt.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Koper van een nieuwbouwwoning, bezig met vloer en inrichting.</dd>
+<dt>Waarom nu</dt><dd>De sleutel komt eraan en de inrichting wordt nu gekozen.</dd>
+<dt>Bang voor</dt><dd>Dat de trap als laatste komt. Dat de prijs opeens hoger is omdat het nieuwbouw is.</dd>
+<dt>Wil eigenlijk</dt><dd>Vanaf dag één een afgewerkt huis met een trap die eruit springt.</dd>
+<dt>Belofte</dt><dd>Je kale nieuwbouwtrap afgewerkt voordat je verhuist.</dd>
+<dt>Kanaal</dt><dd>Meta op nieuwbouwwijken, samenwerking met vloerenbedrijven</dd>
+<dt>Bewijs</dt><dd>Observed: bevestigd door jullie als hoofdgroep. Plus twee Upstairs-reviews over nieuwbouwtrappen, en Daniels noemt nieuwbouw als apart traptype.</dd>
+</dl></article><article class="av groen">
+<header><span class="no">6</span><h3>De woonliefhebber die de hal mooi wil hebben</h3><span class="chip obs">Observed</span><span class="sc">15/20</span></header>
+<p class="kort">Woont al in het huis, heeft een normale simpele trap en wil de hal en vooral de trap mooi maken.</p>
+<blockquote>De trap is het eerste wat je bezoek ziet.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Huiseigenaar die er al woont en geld wil steken in de uitstraling van het huis.</dd>
+<dt>Waarom nu</dt><dd>De simpele trap valt op, zeker als er elders in huis iets is opgeknapt.</dd>
+<dt>Bang voor</dt><dd>Een resultaat dat goedkoop oogt. Een kleur waar ze over vijf jaar op uitgekeken zijn.</dd>
+<dt>Wil eigenlijk</dt><dd>Thuiskomen in een hal die klopt, met warm licht op de treden.</dd>
+<dt>Belofte</dt><dd>Materiaal en verlichting die bij je interieur passen.</dd>
+<dt>Kanaal</dt><dd>Meta en Instagram, projectfoto&#x27;s met LED</dd>
+<dt>Bewijs</dt><dd>Observed: bevestigd door jullie als hoofdgroep. Verlichting en hal komen ook in veel 5-sterrenreviews van Upstairs terug. &#x27;traprenovatie met verlichting&#x27; 350 per maand.</dd>
+</dl></article><article class="av groen">
+<header><span class="no">7</span><h3>Het gezin met kinderen, hond en een krakende trap</h3><span class="chip hyp">Strategic Hypothesis</span><span class="sc">13/20</span></header>
+<p class="kort">De trap krijgt elke dag op zijn kop en maakt het hele huis wakker.</p>
+<blockquote>Twee honden, drie kinderen, één trap.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Gezin met jonge kinderen en huisdieren, drukke trap.</dd>
+<dt>Waarom nu</dt><dd>Krassen, kraken of de hond die uitglijdt.</dd>
+<dt>Bang voor</dt><dd>Dat een nieuwe trap gladder is of na een jaar al beschadigd.</dd>
+<dt>Wil eigenlijk</dt><dd>Een stille, stevige trap waar niemand meer op hoeft te letten.</dd>
+<dt>Belofte</dt><dd>Sterke treden, stiller lopen en minder onderhoud.</dd>
+<dt>Kanaal</dt><dd>Meta</dd>
+<dt>Bewijs</dt><dd>Strategic Hypothesis: losse reviews (twee herders, &#x27;beduidend stiller&#x27;, &#x27;kraakt niet meer&#x27;). Geen eigen data.</dd>
+</dl></article><article class="av groen">
+<header><span class="no">10</span><h3>De 65-plusser die veilig wil blijven wonen</h3><span class="chip hyp">Strategic Hypothesis</span><span class="sc">12/20</span></header>
+<p class="kort">Wil langer thuis wonen en merkt dat de trap minder vanzelfsprekend wordt.</p>
+<blockquote>Zie elke trede, ook &#x27;s avonds.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Stel of alleenstaande van 65 jaar of ouder, eigen woning, of hun kinderen die meedenken.</dd>
+<dt>Waarom nu</dt><dd>Een misstap, slecht zicht op de treden of een gesprek met de kinderen.</dd>
+<dt>Bang voor</dt><dd>Vallen. En een verkoper die misbruik maakt van het vertrouwen.</dd>
+<dt>Wil eigenlijk</dt><dd>Veilig en zelfstandig blijven wonen.</dd>
+<dt>Belofte</dt><dd>Goed zichtbare treden, stroef materiaal en een extra leuning.</dd>
+<dt>Kanaal</dt><dd>Lokale print, huis-aan-huis, Facebook</dd>
+<dt>Bewijs</dt><dd>Strategic Hypothesis: geen enkele review gaat hierover. Werkspot noemt antislipstrips als optie. Geen veiligheidsclaims zonder bewijs.</dd>
+</dl></article><article class="av rood">
+<header><span class="no">9</span><h3>De klant die via via komt</h3><span class="chip obs">Observed</span><span class="sc">14/20</span></header>
+<p class="kort">Komt binnen via Voortman, een aannemer of een bouwbedrijf.</p><p class="waarom"><b>Waarom rood:</b> Nieuw. Komt via Voortman, aannemer of bouwbedrijf, hier mikken we nu niet op.</p>
+<blockquote>Via je aannemer bij ons terecht? Dan regelen we de trap gelijk mee.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Particulier met een lopende klus, of een klant van een partner die de trap doorverwijst.</dd>
+<dt>Waarom nu</dt><dd>De schilder, aannemer of bouwer is net bezig en de trap komt ter sprake.</dd>
+<dt>Bang voor</dt><dd>Een onbekend bedrijf dat na de klus niet meer bereikbaar is.</dd>
+<dt>Wil eigenlijk</dt><dd>Iemand die is aanbevolen door een partij die ze al vertrouwen.</dd>
+<dt>Belofte</dt><dd>Aanbevolen door de mensen die al bij jou over de vloer komen.</dd>
+<dt>Kanaal</dt><dd>Doorverwijzing via partners, geen advertenties</dd>
+<dt>Bewijs</dt><dd>Observed: genoemd door jullie. Hier mikken we nu niet op.</dd>
+</dl></article><article class="av rood">
+<header><span class="no">3</span><h3>Het gezin met versleten traptapijt</h3><span class="chip lik">Likely</span><span class="sc">13/20</span></header>
+<p class="kort">Het tapijt is op, vies of verkleurd en moet er nu echt af.</p><p class="waarom"><b>Waarom rood:</b> Niet echt interessant volgens jullie.</p>
+<blockquote>Dit tapijt ligt er al 20 jaar. Morgen niet meer.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Gezin of stel, jaren-70 tot jaren-90 woning, dichte trap met tapijt.</dd>
+<dt>Waarom nu</dt><dd>De slijtplekken zijn niet meer te negeren, of de benedenverdieping heeft net een nieuwe vloer.</dd>
+<dt>Bang voor</dt><dd>Hoge kosten, een dag vol stof en lijm, en een trap die daarna glad is.</dd>
+<dt>Wil eigenlijk</dt><dd>Een trap die er netjes uitziet en makkelijk schoon blijft.</dd>
+<dt>Belofte</dt><dd>Tapijt eraf, nette trap erop, meestal in één dag.</dd>
+<dt>Kanaal</dt><dd>Google &#x27;trap bekleden&#x27; (6.500), Meta voor/na-foto&#x27;s</dd>
+<dt>Bewijs</dt><dd>Likely: grootste zoekvraag van alle avatars (&#x27;trap bekleden&#x27; 6.500, &#x27;trap bekleden tapijt&#x27; 1.800). Klusidee-vraag over stof vervangen door hout. In reviews wordt de aanleiding zelden genoemd.</dd>
+</dl></article><article class="av rood">
+<header><span class="no">1</span><h3>De klant die schrok van de offerte</h3><span class="chip obs">Observed</span><span class="sc">12/20</span></header>
+<p class="kort">Had een grote aanbieder aan tafel en kreeg een bedrag dat veel hoger lag dan verwacht.</p><p class="waarom"><b>Waarom rood:</b> Jullie zijn niet de goedkoopste.</p>
+<blockquote>Offerte van 8.000 euro voor je trap? Laat ons er even naar kijken.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Huiseigenaar, tweeverdieners of gepensioneerd, koopwoning. Heeft al een adviseur thuis gehad.</dd>
+<dt>Waarom nu</dt><dd>De offerte ligt er en voelt te hoog, maar de trap moet nog steeds.</dd>
+<dt>Bang voor</dt><dd>Dat goedkoper ook slechter is. En dat het volgende bedrijf hetzelfde spel speelt.</dd>
+<dt>Wil eigenlijk</dt><dd>Een eerlijke prijs voor hetzelfde resultaat, en het gevoel niet in de maling genomen te zijn.</dd>
+<dt>Belofte</dt><dd>Een tweede mening en een offerte die je rustig kunt vergelijken.</dd>
+<dt>Kanaal</dt><dd>Google op concurrentnamen en &#x27;traprenovatie kosten&#x27;, Meta-retargeting</dd>
+<dt>Bewijs</dt><dd>Observed: 40 lage Upstairs-reviews gelezen met bedragen van € 5.000 tot € 23.000, en meerdere reviewers noemen elders € 1.900 tot € 3.500. Zoekvolume: &#x27;upstairs traprenovatie&#x27; 2.100 per maand, &#x27;traprenovatie kosten&#x27; 2.500.</dd>
+</dl></article><article class="av rood">
+<header><span class="no">2</span><h3>De huiseigenaar die geen verkoper over de vloer wil</h3><span class="chip obs">Observed</span><span class="sc">11/20</span></header>
+<p class="kort">Wil de trap aanpakken, maar ziet op tegen een verkooppraatje aan de keukentafel.</p><p class="waarom"><b>Waarom rood:</b> Jullie willen juist aan huis verkopen.</p>
+<blockquote>Wij hebben geen korting die vanavond verloopt.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Huiseigenaar, vaak wat ouder en voorzichtig. Vergelijkt rustig en beslist samen met de partner.</dd>
+<dt>Waarom nu</dt><dd>De trap staat al een tijd op het lijstje, maar er komt niemand binnen zonder vertrouwen.</dd>
+<dt>Bang voor</dt><dd>Korting die alleen vandaag geldt. Een adviseur die pas weggaat als er getekend is.</dd>
+<dt>Wil eigenlijk</dt><dd>Rust, duidelijkheid en de tijd om erover na te denken.</dd>
+<dt>Belofte</dt><dd>Een prijs op papier. Je beslist wanneer je wilt.</dd>
+<dt>Kanaal</dt><dd>Meta in de regio, Google &#x27;traprenovatie&#x27; + plaats</dd>
+<dt>Bewijs</dt><dd>Observed: verkoopdruk komt in de meeste lage Upstairs-reviews terug. Eigen sitereview: &#x27;geen gladde praatjes. Helder en duidelijk, eerlijke prijs&#x27;.</dd>
+</dl></article><article class="av rood">
+<header><span class="no">8</span><h3>De klusser die het eerst zelf wilde doen</h3><span class="chip lik">Likely</span><span class="sc">9/20</span></header>
+<p class="kort">Heeft filmpjes gekeken en prijzen bij de bouwmarkt vergeleken, en twijfelt nu.</p><p class="waarom"><b>Waarom rood:</b> Wil het waarschijnlijk toch zelf doen.</p>
+<blockquote>Zelf je trap renoveren? Dit is wat de meeste mensen vergeten.</blockquote>
+<dl>
+<dt>Wie</dt><dd>Handige huiseigenaar, 35 tot 60 jaar, kijkt goed naar de prijs.</dd>
+<dt>Waarom nu</dt><dd>Bochten en mallen blijken lastiger dan gedacht, of de tijd ontbreekt.</dd>
+<dt>Bang voor</dt><dd>Veel betalen voor iets wat hij of zij bijna zelf had gekund.</dd>
+<dt>Wil eigenlijk</dt><dd>Een strak resultaat zonder weekenden kwijt te zijn.</dd>
+<dt>Belofte</dt><dd>Reken uit wat zelf doen echt kost en beslis daarna.</dd>
+<dt>Kanaal</dt><dd>Google &#x27;zelf trap renoveren&#x27; (800), YouTube</dd>
+<dt>Bewijs</dt><dd>Likely: &#x27;zelf trap renoveren&#x27; 800, &#x27;traprenovatie zelf doen&#x27; 800, &#x27;doe het zelf&#x27; 400. Koopintentie is lager.</dd>
+</dl></article></div></section>
+<section><h2>Kleurenpallet</h2>
+<p>Navy staat vast, dat zit in je logo. De vraag is welke actiekleur erbij past. De voorbeelden gebruiken je eigen foto's. De teksten zijn alleen bedoeld om de kleur te beoordelen.</p>
+<div class="pals"><article class="pal" style="--n:#10293F;--a:#2B6E9E;--o:#FFFFFF;--b:#F4F6F7;--s:#C9A77C">
+<header><h3>A. Navy en logoblauw</h3><span class="chip obs">Advies</span></header>
+<ul class="sw"><li style='background:#10293F;color:#fff'><b>Basis</b><span>#10293F</span></li><li style='background:#2B6E9E;color:#FFFFFF'><b>Actie</b><span>#2B6E9E</span></li><li style='background:#F4F6F7;color:#10293F'><b>Vlak</b><span>#F4F6F7</span></li><li style='background:#C9A77C;color:#10293F'><b>Steun</b><span>#C9A77C</span></li></ul>
+<div class="mock">
+<div class="ad">
+<img src="img/hal-eiken.jpg" alt="Gerenoveerde eiken trap in lichte hal">
+<div class="adtxt"><p class="adh">Je trap als nieuw in één dag.</p><p class="ads">Advies en stalen bij jou thuis.</p><span class="btn">Offerte aanvragen</span></div>
+</div>
+<div class="web">
+<div class="bar"><img src="img/logo.png" alt="Logo Uw Trappen Specialist"><span class="btn sm">Offerte</span></div>
+<div class="hero"><div><p class="eye">Traprenovatie</p><p class="h">De trap die je huis afmaakt.</p><span class="btn">Offerte aanvragen</span></div><img src="img/led.jpg" alt="Trap met LED-verlichting"></div>
+</div>
+</div>
+<p><b>Waarom:</b> Komt uit je eigen logo en is de enige optie zonder oranje of geel. Blauw valt op tegen eiken treden, dus de knop springt eruit op bijna elke projectfoto. Eiken blijft de steunkleur.</p><p><b>Let op:</b> Rustiger dan oranje. De foto&#x27;s moeten de aandacht trekken.</p>
+</article><article class="pal" style="--n:#10293F;--a:#D19A5B;--o:#10293F;--b:#F7F4EE;--s:#3277A8">
+<header><h3>B. Navy en eiken</h3></header>
+<ul class="sw"><li style='background:#10293F;color:#fff'><b>Basis</b><span>#10293F</span></li><li style='background:#D19A5B;color:#10293F'><b>Actie</b><span>#D19A5B</span></li><li style='background:#F7F4EE;color:#10293F'><b>Vlak</b><span>#F7F4EE</span></li><li style='background:#3277A8;color:#10293F'><b>Steun</b><span>#3277A8</span></li></ul>
+<div class="mock">
+<div class="ad">
+<img src="img/hal-eiken.jpg" alt="Gerenoveerde eiken trap in lichte hal">
+<div class="adtxt"><p class="adh">Je trap als nieuw in één dag.</p><p class="ads">Advies en stalen bij jou thuis.</p><span class="btn">Offerte aanvragen</span></div>
+</div>
+<div class="web">
+<div class="bar"><img src="img/logo.png" alt="Logo Uw Trappen Specialist"><span class="btn sm">Offerte</span></div>
+<div class="hero"><div><p class="eye">Traprenovatie</p><p class="h">De trap die je huis afmaakt.</p><span class="btn">Offerte aanvragen</span></div><img src="img/led.jpg" alt="Trap met LED-verlichting"></div>
+</div>
+</div>
+<p><b>Waarom:</b> Voelt warm en ambachtelijk en sluit aan op het hout in je foto&#x27;s.</p><p><b>Let op:</b> Op eiken trappen valt de knop weg. Dicht tegen de beige tonen van Upstairs.</p>
+</article><article class="pal" style="--n:#0F2A3E;--a:#FF9300;--o:#0F2A3E;--b:#F4F1EA;--s:#B2AEA3">
+<header><h3>C. Navy en amber (huidig)</h3></header>
+<ul class="sw"><li style='background:#0F2A3E;color:#fff'><b>Basis</b><span>#0F2A3E</span></li><li style='background:#FF9300;color:#0F2A3E'><b>Actie</b><span>#FF9300</span></li><li style='background:#F4F1EA;color:#0F2A3E'><b>Vlak</b><span>#F4F1EA</span></li><li style='background:#B2AEA3;color:#0F2A3E'><b>Steun</b><span>#B2AEA3</span></li></ul>
+<div class="mock">
+<div class="ad">
+<img src="img/hal-eiken.jpg" alt="Gerenoveerde eiken trap in lichte hal">
+<div class="adtxt"><p class="adh">Je trap als nieuw in één dag.</p><p class="ads">Advies en stalen bij jou thuis.</p><span class="btn">Offerte aanvragen</span></div>
+</div>
+<div class="web">
+<div class="bar"><img src="img/logo.png" alt="Logo Uw Trappen Specialist"><span class="btn sm">Offerte</span></div>
+<div class="hero"><div><p class="eye">Traprenovatie</p><p class="h">De trap die je huis afmaakt.</p><span class="btn">Offerte aanvragen</span></div><img src="img/led.jpg" alt="Trap met LED-verlichting"></div>
+</div>
+</div>
+<p><b>Waarom:</b> Bestaat al en valt hard op. Het doet ook denken aan warm LED-licht.</p><p><b>Let op:</b> ProStairs en Daniels zijn ook oranje. Je lijkt dan op de concurrent.</p>
+</article></div></section>
+<section><h2>Tone of voice</h2><p>Drie richtingen, elk met dezelfde soort boodschap, zodat je het verschil in toon ziet.</p><div class="tvs"><article class="tv"><header><h3>De nuchtere vakman</h3></header>
+<p>Kort, eerlijk, rekent dingen voor. Zegt ook wanneer iets niet kan.</p><blockquote>Je trap is in één dag klaar. Je krijgt vooraf een prijs op papier en beslist daarna rustig zelf.</blockquote><p class="mut">Past bij &#x27;het moet kloppen&#x27;, de lijn op je Wie-wij-zijn-pagina. Goed als tweede laag, voor uitleg en service.</p></article><article class="tv"><header><h3>De woonadviseur</h3><span class="chip obs">Advies</span></header>
+<p>Warm, kijkt mee met kleur, licht en interieur.</p><blockquote>De trap is het eerste wat je ziet als je thuiskomt. Wij kijken mee welke kleur past bij je vloer en muren.</blockquote><p class="mut">Past het best bij de groene groepen: mensen die bezig zijn met inrichting en uitstraling.</p></article><article class="tv"><header><h3>De scherpe uitdager</h3></header>
+<p>Spreekt de branche direct aan, prikkelt.</p><blockquote>8.000 euro voor een rechte trap? Vraag eerst eens een tweede prijs op.</blockquote><p class="mut">Valt op in ads, maar past niet nu jullie niet op prijs willen concurreren.</p></article></div></section>
+<section><h2>Concurrenten op een rij</h2><div class="tw"><table><thead><tr><th>Bedrijf</th><th>Garantie</th><th>Prijs</th><th>Reviews</th><th>Kleuren</th><th>Google-verkeer NL</th></tr></thead><tbody><tr><th scope='row'>Upstairs</th><td>Levenslang</td><td>Geen op site. Reviews: € 5.000 tot € 23.000</td><td>Trustpilot 4,2 (1.666), Trustoo 9,5 (5.347)</td><td>Geel, navy, beige</td><td>13.000 organisch, 5.000 betaald p/m</td></tr><tr><th scope='row'>ProStairs</th><td>15 jaar</td><td>Online prijscalculator</td><td>Trustpilot 4,5 (115), Slimster 9,0 (14)</td><td>Oranje, antraciet</td><td>1.460 organisch, 580 betaald p/m</td></tr><tr><th scope='row'>Daniels Traprenovatie</th><td>Niet genoemd</td><td>&#x27;Eerlijke prijs&#x27;, geen tijdelijke kortingen</td><td>4,9 (639, vooral Google)</td><td>Bijna zwart, oranje</td><td>Niet opgehaald</td></tr></tbody></table></div></section>
+<section><h2>Wat vaststaat</h2><ul class="vast"><li><b>Bedrijf:</b> Bestaat sinds 2015. Duizenden trappen gerenoveerd.</li><li><b>Garantie:</b> 15 jaar bij normaal gebruik, onder andere op slijtage.</li><li><b>Niet goed, geld terug:</b> Weg.</li><li><b>Prijs:</b> Vanaf € 1.500. Hoeft niet per se genoemd te worden.</li><li><b>Aanspreekvorm:</b> Je.</li><li><b>Voortman:</b> Niet zichtbaar in de merkvoering. Mag klein vermeld worden.</li><li><b>Werkgebied:</b> Oost-Nederland.</li><li><b>Aanbod:</b> Laminaat, pvc, vloerbedekking en overzettreden. Eventueel wangen meebekleden, ledverlichting, leuningen en schilderwerk.</li><li><b>Huisbezoek:</b> We komen langs met een koffer met showmodellen, kleurstalen, boekjes, info en traptredes die op de trap gelegd kunnen worden.</li><li><b>Snelheid:</b> Afspraak binnen 1 dag, offerte binnen 1 dag.</li><li><b>Knoppen:</b> Hoofdknop is Offerte aanvragen. Tweede keuze is een gratis brochure, die maken we later.</li><li><b>Actie:</b> Gratis ledverlichting als Black Friday-actie.</li><li><b>Tone of voice:</b> De woonadviseur.</li></ul></section>
+
+</main>
+<footer><div class="wrap">Bronnen: Trustpilot (Upstairs, ProStairs), Slimster, Trustoo, Radar-forum, Klusidee, Ahrefs (NL, 30 oktober 2026) en de sites van de vier bedrijven. Prijzen uit reviews zijn ervaringen van reviewers, geen officiële tarieven.</div></footer>
+</body></html>
