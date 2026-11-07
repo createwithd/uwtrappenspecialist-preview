@@ -170,7 +170,7 @@ function bfv(){var r=$('input[name=bfv]:checked');return r?r.value:'';}
 function korting(){if(!$('#stf')||bfv()==='led'){return 0;}var a=$('input[name=aantal]:checked').value,x=$$('.acc input:checked').map(function(c){return c.dataset.name;});return a!=='1 trap'?500:x.indexOf('Wangen meebekleden')>-1?350:250;}
 function stfZet(){var k=korting();if(!k){return;}$('#stfB').textContent='€ '+k;$$('#stf li').forEach(function(l){l.classList.toggle('on',+l.dataset.k===k);});}
 $$('input[name=aantal],.acc input').forEach(function(c){c.addEventListener('change',stfZet);});
-function bfZet(){if(!bfv()){return;}var led=bfv()==='led',g=$('.acc em.grt');$('#stf').hidden=led;$('#ledbox').hidden=!led;if(g){g.textContent=led?'Gratis':'';}$('#ledLbl').textContent=led?'(gratis)':'(optioneel)';ledT.checked=led;ledZet();stfZet();}
+function bfZet(){if(!bfv()){return;}var led=bfv()==='led',g=$('.acc em.grt');$('#stf').hidden=led;$('#ledbox').hidden=!led;stfZet();}
 $$('input[name=bfv]').forEach(function(r){r.addEventListener('change',bfZet);});
 function ledZet(){var c=$('.acc input[data-name="Ledverlichting"]');c.checked=ledT.checked;teller();kzToon();}ledT.addEventListener('change',ledZet);
 $('#neemMee').addEventListener('click',function(){gekozen=true;$('#kn').textContent=gn;open('offerte');});
