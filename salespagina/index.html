@@ -108,6 +108,7 @@ html[data-mode=bf] .kaart,html[data-mode=bf] .vlak{background-color:#26221C}html
 <span class="badge">Meest gekozen: zwart met led</span><h1>Traprenovatie op maat</h1><p class="sub">De trap die je huis afmaakt, in de kleur die bij je vloer en muren past.</p>
 <div class="rating"><span class="st">★★★★★</span> <b>4,9</b> uit 5<span class="stock"><i></i>Afspraak binnen 1 dag</span></div>
 <fieldset><legend>Hoeveel trappen?</legend><div class="opts"><label><input type="radio" name="aantal" value="1 trap" checked><span>1 trap</span></label><label><input type="radio" name="aantal" value="2 trappen"><span>2 trappen</span></label><label><input type="radio" name="aantal" value="3 of meer"><span>3 of meer</span></label></div></fieldset>
+<fieldset><legend>Soort trap <small id="soortM" hidden style="font-weight:700;color:var(--mut)">(meerdere mogelijk)</small></legend><div class="opts"><label><input type="checkbox" name="soort" value="Dichte trap"><span>Dichte trap</span></label><label><input type="checkbox" name="soort" value="Open trap"><span>Open trap</span></label></div></fieldset>
 
 <div class="erbij"><b>Bij je traprenovatie zit</b><ul><li>Gratis advies bij je thuis, met stalen en voorbeeldtreden</li><li>Inmeten en een mal van elke trede</li><li>Montage door onze eigen monteurs</li><li>Binnen 1 dag geïnstalleerd</li><li>15 jaar garantie op kras-, loop- en gebruikerssporen</li></ul></div>
 <fieldset class="accs"><legend>Maak het compleet</legend><label class="acc"><input type="checkbox" data-name="Ledverlichting"><img src="img/p-hout-led.jpg" alt=""><span><b>Ledverlichting</b><small>Optioneel: warm of koud licht in je treden</small></span></label><label class="acc"><input type="checkbox" data-name="Wangen meebekleden"><img src="img/p-wang-steen.jpg" alt=""><span><b>Wangen meebekleden</b><small>Ook de zijkanten strak afgewerkt</small></span></label><label class="acc"><input type="checkbox" data-name="Schilderwerk"><img src="img/wit.jpg" alt=""><span><b>Schilderwerk</b><small>Muren en stootborden meteen fris</small></span></label></fieldset>
@@ -169,13 +170,17 @@ function stfZet(){var k=korting();if(!k){return;}$('#stfB').textContent='€ '+k
 $$('input[name=aantal],.acc input').forEach(function(c){c.addEventListener('change',stfZet);});
 function bfZet(){if(!bfv()){return;}var led=bfv()==='led',g=$('.acc em.grt');$('#stf').hidden=led;$('#ledbox').hidden=!led;stfZet();}
 $$('input[name=bfv]').forEach(function(r){r.addEventListener('change',bfZet);});
+function meer(){return $('input[name=aantal]:checked').value!=='1 trap';}
+function soortZet(){$('#soortM').hidden=!meer();if(!meer()){var c=$$('input[name=soort]:checked');c.slice(1).forEach(function(x){x.checked=false;});}}
+$$('input[name=soort]').forEach(function(c){c.addEventListener('change',function(){if(c.checked&&!meer()){$$('input[name=soort]').forEach(function(x){if(x!==c){x.checked=false;}});}});});
+$$('input[name=aantal]').forEach(function(c){c.addEventListener('change',soortZet);});
 function ledZet(){var c=$('.acc input[data-name="Ledverlichting"]');c.checked=ledT.checked;teller();kzToon();}ledT.addEventListener('change',ledZet);
 
 $$('[data-extra]').forEach(function(b){b.addEventListener('click',function(){var c=$('.acc input[data-name="'+b.dataset.extra+'"]');c.checked=true;teller();toast(b.dataset.extra+' toegevoegd');});});
 $$('.acc input').forEach(function(c){c.addEventListener('change',function(){teller();if(c.dataset.name==='Ledverlichting'){ledT.checked=c.checked;kzToon();}});});
 var d=$('#drw');
 function open(m){var v=function(n){return $('input[name='+n+']:checked').value;};var ex=$$('.acc input:checked').map(function(c){return c.dataset.name;});var kl=[];
-$('#jk').innerHTML='<b>Jouw keuze</b><ul><li>'+[v('aantal')].concat(kl).concat(ex).concat(korting()?['Black Friday-korting: € '+korting()]:(bfv()==='led'?['Black Friday: gratis led']:[])).join('</li><li>')+'</li></ul>';
+$('#jk').innerHTML='<b>Jouw keuze</b><ul><li>'+[v('aantal')].concat($$('input[name=soort]:checked').map(function(c){return c.value;})).concat(kl).concat(ex).concat(korting()?['Black Friday-korting: € '+korting()]:(bfv()==='led'?['Black Friday: gratis led']:[])).join('</li><li>')+'</li></ul>';
 var br=m==='brochure';$('#dt').textContent=br?'Gratis brochure':'Je offerte aanvragen';$('#dsub').textContent=br?'Met materialen, kleuren en projecten.':'Binnen 1 dag plannen we een afspraak met je in.';$('#jk').style.display=br?'none':'block';$('#sitw').style.display=br?'none':'block';$('.alleenof').style.display=br?'none':'block';$('#dsend').textContent=br?'Brochure aanvragen':'Offerte aanvragen';$('#dform').style.display='flex';$('#ddank').style.display='none';d.classList.add('on');}
 function dicht(){d.classList.remove('on');}
 $$('[data-open]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.open);});});$('#sluit').addEventListener('click',dicht);$('#scrim').addEventListener('click',dicht);document.addEventListener('keydown',function(e){if(e.key==='Escape'){dicht();}});
