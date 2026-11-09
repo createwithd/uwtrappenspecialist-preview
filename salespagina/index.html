@@ -152,7 +152,7 @@ html[data-mode=bf] .kaart,html[data-mode=bf] .vlak{background-color:#26221C}html
 <div id="ddank" style="display:none"><h3>Bedankt voor je aanvraag</h3><p id="ddp"></p></div></aside></div>
 <div class="toast" id="toast" role="status"></div>
 <script>var LABELS={"k-open-eiken": [["Open trap", 52, 22], ["Treden in eikenlook", 44, 46]], "k-grijs-led": [["Led als optie", 50, 34], ["Ook met bocht", 18, 66]], "k-eiken-zwart": [["Eiken treden", 44, 34], ["Zwarte stootborden", 26, 66]], "k-leisteen": [["Treden en wang in leisteen", 22, 18], ["Witte stootborden", 46, 58]], "k-steen-led": [["Steenlook", 52, 22], ["Led als optie", 44, 62]], "led-zwart": [["Optioneel: led in je treden", 42, 33], ["Strak op maat", 46, 60], ["Binnen 1 dag geïnstalleerd", 30, 88]], "hal": [["Past bij je vloer", 6, 76], ["Onderhoudsvriendelijk", 50, 60], ["Binnen 1 dag geïnstalleerd", 40, 88]], "curve": [["Ook met bocht", 40, 36], ["Warme houtlook", 12, 70], ["15 jaar garantie", 44, 90]], "zwartwit": [["Overzettrede", 44, 24], ["Stootbord in wit", 42, 44], ["Wang in beton look", 3, 66]], "eikzwart": [["Eiken treden", 30, 55], ["Zwarte stootborden", 54, 74]], "bocht-grijs": [["Grijs eiken", 44, 66], ["Ook met bocht", 40, 88]], "p-bruin": [["Donker eiken", 26, 62]], "p-smal": [["Eiken met zwart", 8, 70]], "led-steen": [["Optioneel: led in je treden", 30, 16], ["Beton look", 8, 62], ["Binnen 1 dag geïnstalleerd", 26, 90]], "grijs2": [["Licht beton", 40, 60], ["Strak op maat", 10, 88]]};
-function $(s,r){return (r||document).querySelector(s)}function $$(s,r){return [].slice.call((r||document).querySelectorAll(s))}
+var t0=Date.now();function $(s,r){return (r||document).querySelector(s)}function $$(s,r){return [].slice.call((r||document).querySelectorAll(s))}
 var sg=$('#stage'),sv=$('#stagev'),pl=$('#pils'),tb=$$('.thumbs button');
 function zetPils(k){pl.innerHTML=(LABELS[k]||[]).map(function(l){return '<span class="pil" style="left:'+l[1]+'%;top:'+l[2]+'%"><i></i>'+l[0]+'</span>';}).join('');}
 function foto(k){sv.pause();sv.hidden=true;sg.hidden=false;sg.src='img/'+k+'.jpg';zetPils(k);tb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.img===k?'true':'false');});}
@@ -200,7 +200,7 @@ $('#dform').addEventListener('submit',function(e){e.preventDefault();var f=this,
 var klaar=function(echt){f.style.display='none';$('#ddp').textContent=echt?'We nemen binnen 1 dag contact met je op om een afspraak bij je thuis te plannen.':'Dit is een preview, er is niets verstuurd.';$('#ddank').style.display='block';};
 if(!window.UTS_ENDPOINT){klaar(false);return;}
 var sit=$('.sit button[aria-pressed=true]');
-var data={naam:$('#dn').value,email:$('#dm').value,telefoon:$('#dt2').value,postcode:$('#dp').value,bericht:$('#dbe').value,situatie:sit?sit.textContent:'',keuze:keuzeTekst(),pagina:location.href,hp:$('#dhp').value};
+var data={naam:$('#dn').value,email:$('#dm').value,telefoon:$('#dt2').value,postcode:$('#dp').value,bericht:$('#dbe').value,situatie:sit?sit.textContent:'',keuze:keuzeTekst(),pagina:location.href,t:Date.now()-t0,hp:$('#dhp').value};
 knop.disabled=true;fout.textContent='';
 fetch(window.UTS_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(function(r){if(!r.ok){throw 0;}klaar(true);try{(window.dataLayer=window.dataLayer||[]).push({event:'uts_aanvraag'});}catch(x){}if(window.UTS_BEDANKT){setTimeout(function(){location.href=window.UTS_BEDANKT;},700);}}).catch(function(){knop.disabled=false;fout.textContent='Versturen lukte niet. Probeer het opnieuw of bel (06) 44 69 75 40.';});});
 
