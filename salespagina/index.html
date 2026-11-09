@@ -180,14 +180,17 @@ $$('[data-extra]').forEach(function(b){b.addEventListener('click',function(){var
 $$('.acc input').forEach(function(c){c.addEventListener('change',function(){teller();if(c.dataset.name==='Ledverlichting'){ledT.checked=c.checked;kzToon();}});});
 var d=$('#drw');
 var ak={};$$('.buy input').forEach(function(c){c.addEventListener('change',function(){ak[c.name||c.dataset.name||'x']=1;});});
+function ladeZet(){$$('#jk .dq').forEach(function(g){var q=g.dataset.q;$$('button',g).forEach(function(b){var r=q==='acc'?$('.acc input[data-name="'+b.dataset.v+'"]'):$('input[name='+q+'][value="'+b.dataset.v+'"]');var aan=!!(r&&r.checked)&&(q==='soort'||q==='acc'||ak[q]);b.setAttribute('aria-pressed',aan?'true':'false');});});}
 function keuzeTekst(){var q=function(n){var b=$('#jk .dq[data-q='+n+'] button[aria-pressed=true]');return b?b.dataset.v:'';};var a=q('aantal'),bv=q('bfv'),it=[];if(a){it.push(a);}$$('input[name=soort]:checked').forEach(function(c){it.push(c.value);});$$('.acc input:checked').forEach(function(c){it.push(c.dataset.name);});if(bv==='led'){it.push('Black Friday: gratis led');}else if(bv==='korting'){it.push('Black Friday: tot € 500 korting'+(a?' (€ '+korting()+')':''));}return it.join('\n');}
 function open(m){var v=function(n){return $('input[name='+n+']:checked').value;};var ex=$$('.acc input:checked').map(function(c){return c.dataset.name;});var kl=[];
-var aSel=ak.aantal?v('aantal'):'',vSel=ak.bfv?bfv():'';
-var knop=function(q,opt,sel){return '<div class="sit dq" data-q="'+q+'" style="margin-top:5px;grid-template-columns:repeat('+opt.length+',1fr)">'+opt.map(function(o){return '<button type="button" data-v="'+o[0]+'" aria-pressed="'+(o[0]===sel)+'">'+o[1]+'</button>';}).join('')+'</div>';};
-var hq='<b>Hoeveel trappen?</b>'+knop('aantal',[['1 trap','1 trap'],['2 trappen','2 trappen'],['3 of meer','3 of meer']],aSel);
-if($('#stf')){hq+='<b style="display:block;margin-top:9px">Je Black Friday-voordeel</b>'+knop('bfv',[['korting','Tot € 500 korting'],['led','Gratis led']],vSel);}
-$('#jk').innerHTML=hq;
-$$('#jk .dq button').forEach(function(b){b.addEventListener('click',function(){var g=b.parentNode;$$('button',g).forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});var r=$('input[name='+g.dataset.q+'][value="'+b.dataset.v+'"]');if(r){r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}));}});});
+var knop=function(q,opt,meer){return '<div class="sit dq" data-q="'+q+'"'+(meer?' data-meer="1"':'')+' style="margin-top:5px;grid-template-columns:repeat('+opt.length+',1fr)">'+opt.map(function(o){return '<button type="button" data-v="'+o[0]+'" aria-pressed="false">'+o[1]+'</button>';}).join('')+'</div>';};
+var kop=function(t){return '<b style="display:block;margin-top:9px">'+t+'</b>';};
+var hq='<b>Hoeveel trappen?</b>'+knop('aantal',[['1 trap','1 trap'],['2 trappen','2 trappen'],['3 of meer','3 of meer']]);
+hq+=kop('Soort trap')+knop('soort',[['Dichte trap','Dichte trap'],['Open trap','Open trap']],1);
+hq+=kop('Extra\'s <small style="font-weight:400">(optioneel)</small>')+knop('acc',$$('.acc input').map(function(c){return [c.dataset.name,c.dataset.name];}),1);
+if($('#stf')){hq+=kop('Je Black Friday-voordeel')+knop('bfv',[['korting','Tot € 500 korting'],['led','Gratis led']]);}
+$('#jk').innerHTML=hq;ladeZet();
+$$('#jk .dq button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentNode.dataset.q,r=q==='acc'?$('.acc input[data-name="'+b.dataset.v+'"]'):$('input[name='+q+'][value="'+b.dataset.v+'"]');if(!r){return;}r.checked=b.parentNode.dataset.meer?!r.checked:true;r.dispatchEvent(new Event('change',{bubbles:true}));ladeZet();});});
 var br=m==='brochure';$('#dt').textContent=br?'Gratis brochure':'Je offerte aanvragen';$('#dsub').textContent=br?'Met materialen, kleuren en projecten.':'Binnen 1 dag plannen we een afspraak met je in.';$('#jk').style.display=br?'none':'block';$('#sitw').style.display=br?'none':'block';$('.alleenof').style.display=br?'none':'block';$('#dsend').textContent=br?'Brochure aanvragen':'Offerte aanvragen';$('#dform').style.display='flex';$('#ddank').style.display='none';d.classList.add('on');}
 function dicht(){d.classList.remove('on');}
 $$('[data-open]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.open);});});$('#sluit').addEventListener('click',dicht);$('#scrim').addEventListener('click',dicht);document.addEventListener('keydown',function(e){if(e.key==='Escape'){dicht();}});
